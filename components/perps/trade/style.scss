@@ -1,0 +1,47 @@
+.perps-trade-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  flex-basis: 26%;
+  min-height: 100%;
+
+  .trade-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    button {
+      border-radius: 35px;
+      background: rgba(21, 21, 21, 0.1);
+      border: 1px solid rgba(21, 21, 21, 0.1);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+
+      img {
+        width: 20px;
+      }
+    }
+
+    #long.active,
+    #long:hover {
+      background: #00b87b2b;
+      border: 1px solid $success;
+      cursor: pointer;
+      transition: all 0.4s linear;
+    }
+
+    #short.active,
+    #short:hover {
+      background: #ffbf002b;
+      border: 1px solid $yellow;
+      cursor: pointer;
+      transition: all 0.4s linear;
+    }
+  }
+}

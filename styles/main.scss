@@ -1,0 +1,17 @@
+@import './variable';
+@import '../components/navbar/style.scss';
+@import '../components/trade/style.scss';
+@import '../components/select-token-modal/style.scss';
+@import '../components/trade/swap/style.scss';
+@import '../components/trade/limit/style.scss';
+
+@import '../components/perps/style.scss';
+@import '../components/perps/trade/style.scss';
+@import '../components/perps/trade/long/style.scss';
+
+
+@import '../components/perps/trading-graph/style.scss';
+@import '../components/perps/histories/style.scss';
+
+
+@import '../components/pools/pool/style.scss';

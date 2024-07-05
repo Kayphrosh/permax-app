@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variable';
+
+@font-face {
+  font-family: 'general-sans-regular';
+  src: url('/fonts/GeneralSans-Regular.woff');
+}
+@font-face {
+  font-family: 'general-sans-medium';
+  src: url('/fonts/GeneralSans-Medium.woff');
+}
+@font-face {
+  font-family: 'general-sans-bold';
+  src: url('/fonts/GeneralSans-Bold.woff');
+}
+
+@font-face {
+  font-family: 'sf-automation';
+  src: url('/fonts/SF-Automaton Bold.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'general-sans-regular';
+  color: $white;
+  background: $black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font-family: 'general-sans-regular';
+}
+input {
+  font-family: 'general-sans-regular';
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+  }
+}
+input:focus {
+  outline: none;
+}

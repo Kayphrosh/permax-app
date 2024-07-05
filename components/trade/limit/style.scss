@@ -1,0 +1,122 @@
+.limit-container {
+  .limit-input.swap-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(217, 217, 217, 0);
+    margin-bottom: 8px;
+
+    &:hover {
+      border: 1px solid rgba(217, 217, 217, 0.1);
+      transition: all 0.4s;
+    }
+    .main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .limit-form.swap-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        label {
+          font-family: 'general-sans-medium';
+          color: #d3d3d3;
+          font-size: 16px;
+          font-style: normal;
+          line-height: normal;
+          width: 100%;
+          display: flex;
+
+          span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin: 0 6px;
+            color: $white;
+            font-size: 16px;
+            img {
+              width: 16px;
+            }
+          }
+        }
+        input {
+          font-family: 'general-sans-medium';
+          background: none;
+          border: none;
+          color: $white;
+          font-size: 32px;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: 2px;
+
+          &::placeholder {
+            color: #979797;
+          }
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        // input[type='number'] {
+        //   -moz-appearance: textfield;
+        // }
+      }
+
+      .ouput-currency {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        max-width: max-content;
+
+        .icon {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          img {
+            width: 32px;
+          }
+          span {
+            color: $white;
+            font-family: 'general-sans-medium';
+            font-size: 18px;
+            line-height: normal;
+          }
+        }
+
+        #drop-down {
+          width: 20px;
+        }
+      }
+    }
+
+    .limit-rate {
+      display: flex;
+      gap: 0.5rem;
+
+      div {
+        padding: 4px 14px;
+
+        border: 1px solid rgba(217, 217, 217, 0.1);
+        border-radius: 30px;
+        font-size: 14px;
+        font-family: 'general-sans-medium';
+        color: #d3d3d3;
+
+        &:hover,
+        &.active {
+          color: #fff;
+          background: #363636;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
