@@ -29,7 +29,7 @@ const TradingGraph: React.FC<TradingGraphProps> = ({
           hide_side_toolbar: false,
           allow_symbol_change: true,
           save_image: false,
-          details: true,
+          details: false,
           studies: ['Volume@tv-basicstudies'],
           show_popup_button: true,
         });
@@ -46,7 +46,7 @@ const TradingGraph: React.FC<TradingGraphProps> = ({
       script.onload = loadWidget;
       document.body.appendChild(script);
     } else {
-      loadWidget(); // Initialize the widget immediately if script is already loaded
+      loadWidget();
     }
 
     return () => {
@@ -57,11 +57,23 @@ const TradingGraph: React.FC<TradingGraphProps> = ({
   }, [selectedToken]);
 
   return (
-    <div
-      ref={chartContainerRef}
-      id="tradingview_12345"
-      className="trading-graph-container"
-    ></div>
+    <>
+      <style>
+        {`
+          :root {
+            --tv-color-pane-background: #000000; /* Changing background color for both light and dark themes */
+          }
+          .theme-dark {
+            --tv-color-pane-background: #000000; /* Specific override for dark theme if needed */
+          }
+        `}
+      </style>
+      <div
+        ref={chartContainerRef}
+        id="tradingview_12345"
+        className="trading-graph-container"
+      ></div>
+    </>
   );
 };
 

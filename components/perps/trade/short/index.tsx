@@ -30,21 +30,7 @@ const Short = () => {
 
   return (
     <div className="long-input-container swap-input-container">
-      <div className="swap-input">
-        <div className="swap-form">
-          <label htmlFor="You Pay">You're Paying</label>
-          <input type="number" placeholder="0.00" />
-        </div>
-        <button className="token" onClick={openModal}>
-          <div className="icon">
-            <img src="./Images/eth.svg" alt="" />
-            <span>ETH</span>
-          </div>
-          <div title="drop down" id="drop-down">
-            <img src="./Images/drop-down.svg" alt="" />
-          </div>
-        </button>
-      </div>
+
 
       <div className="swap-input long-size-input">
         <div className="swap-form">

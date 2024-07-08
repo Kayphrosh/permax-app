@@ -24,9 +24,10 @@ const NavBar = () => {
 
         <div className="navbar-cta">
           <div className="network">
-            <img src="./Images/eth.svg" alt="" />
+            <img src="./Images/frax.svg" alt="" />
           </div>
-          <button>Connect Wallet</button>
+          <button id='deposit'>Deposit</button>
+          <button id='connect-wallet'>Connect Wallet</button>
         </div>
     </div>
   );

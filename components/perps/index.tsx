@@ -112,8 +112,24 @@ const Perps: React.FC = () => {
               )}
               <div className={getRateClassName(5)}>5%</div>
             </div>
-            {/* Additional rates and details here */}
+            <div className="funding-rate">
+              <div className="label">Funding Rate</div>
+              <div>-0.000000%</div>
+            </div>
+            <div className="funding-rate">
+              <div className="label">24h High</div>
+              <div>-0.10%</div>
+            </div>
+            <div className="funding-rate">
+              <div className="label">24h Low</div>
+              <div>-0.10%</div>
+            </div>
+            <div className="funding-rate">
+              <div className="label">24h Vol</div>
+              <div>-0.000000%</div>
+            </div>
           </div>
+
           <TradingGraph
             selectedToken={selectedToken}
             onDataUpdate={handleDataUpdate}
