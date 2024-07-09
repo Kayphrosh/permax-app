@@ -4,7 +4,8 @@ const Short = () => {
   const leverageSteps = [1.1, 20, 40, 60, 80, 100];
   const [leverage, setLeverage] = useState(leverageSteps[0]);
   const [isModalOpen, setModalOpen] = useState(false);
-
+  const [selectedToken, setSelectedToken] = useState(null);
+  
   const handleLeverageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLeverage(parseFloat(event.target.value));
   };
@@ -28,10 +29,14 @@ const Short = () => {
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
 
+    const handleSelectToken = (token: any) => {
+      console.log('Selected Token:', token);
+      setSelectedToken(token);
+      closeModal();
+    };
+
   return (
     <div className="long-input-container swap-input-container">
-
-
       <div className="swap-input long-size-input">
         <div className="swap-form">
           <label htmlFor="You Pay">Size of Short</label>
@@ -107,7 +112,11 @@ const Short = () => {
 
       <button className="swap-cta">Connect Wallet</button>
 
-      <SelectTokenModal isOpen={isModalOpen} onClose={closeModal} />
+      <SelectTokenModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        onSelect={handleSelectToken}
+      />
     </div>
   );
 };
